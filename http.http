@@ -1,0 +1,78 @@
+ @BASE_URL = http://localhost:3000/api/
+
+###
+GET {{BASE_URL}}users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJUeXBlIjoiMCIsIl9pZCI6IjVmODdmY2ZhNmMwZTU3NTgzY2UwMjhhMSIsIm5hbWUiOiJtZWN6dXBLYXltYWthbSIsInVzZXJOYW1lIjoiZGVsaWtheW1ha2FtIiwiZW1haWwiOiJkZWxpLmtheW1ha2FtQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJDUwdjh3QlVIL0w3UGp6cXc0TThicWVSQVlPREpBUzFmUC9XSXBQbTVCY0c4dDhnZjc2YVBtIiwiY3JlYXRlZEF0IjoiMjAyMC0xMC0xNVQwNzo0MDo0Mi4zNDFaIiwidXBkYXRlZEF0IjoiMjAyMC0xMC0xNVQwNzo0MDo0Mi4zNDFaIiwiX192IjowfSwiaWF0IjoxNjAyNzU1ODY4LCJleHAiOjE2MDI3NjMwNjh9.HcdK06v42ed3Kwdzy84nJc_yuMIWMYrg3q3RUR91OCA
+
+###
+PATCH  {{BASE_URL}}users/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJUeXBlIjoiMCIsIl9pZCI6IjVmODdmY2ZhNmMwZTU3NTgzY2UwMjhhMSIsIm5hbWUiOiJtZWN6dXBLYXltYWthbSIsInVzZXJOYW1lIjoiZGVsaWtheW1ha2FtIiwiZW1haWwiOiJkZWxpLmtheW1ha2FtQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJDUwdjh3QlVIL0w3UGp6cXc0TThicWVSQVlPREpBUzFmUC9XSXBQbTVCY0c4dDhnZjc2YVBtIiwiY3JlYXRlZEF0IjoiMjAyMC0xMC0xNVQwNzo0MDo0Mi4zNDFaIiwidXBkYXRlZEF0IjoiMjAyMC0xMC0xNVQwNzo0MDo0Mi4zNDFaIiwiX192IjowfSwiaWF0IjoxNjAyNzU1ODY4LCJleHAiOjE2MDI3NjMwNjh9.HcdK06v42ed3Kwdzy84nJc_yuMIWMYrg3q3RUR91OCA
+
+{
+    "userName" : "simyaci",
+    "name" : "Enes EKINCI",
+    "password": "password"
+}
+
+###
+POST {{BASE_URL}}users/
+Content-Type: application/json
+
+{
+    "name" : "kaymakam",
+    "userName": "kaymakam",
+    "email":"kaymakam@gmail.com",
+    "password":"12345600"
+}
+
+###
+PATCH  {{BASE_URL}}users/5f78a8b74373c63d5841e1ed
+Content-Type: application/json
+
+{
+    "userName" : "simyaci",
+    "name" : "Enes EKINCI",
+    "password": "password"
+}
+
+###
+DELETE  {{BASE_URL}}users/5f7860f4877e4f3e383c96e
+
+
+###
+POST {{BASE_URL}}users/login
+Content-Type: application/json
+
+{
+    "email" : "enes.eknc.96@gmail.com",
+    "password" : "12345600"
+}
+
+###
+POST {{BASE_URL}}membership-application/generate-membership-token
+Content-Type: application/json
+
+{
+    "email" : "enes.eknc.96@gmail.com"
+}
+
+###
+POST {{BASE_URL}}users/register
+Content-Type: application/json
+
+{
+    "name" : "eneseknc",
+    "userName": "eneseknc",
+    "email":"enes.eknc.96@gmail.com",
+    "password":"12345600"
+}
+
+###
+POST {{BASE_URL}}membership-application/checkMembershipToken
+Content-Type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoiZGVsaS5rYXltYWthbTIyQGdtYWlsLmNvbSJ9LCJpYXQiOjE2MDQyNjczNzcsImV4cCI6MTYwNDI3NDU3N30.u6a5PlDmfdmbd2q6vqTW3l2n1jOU_tjxpwLudMPV5bw"
+}

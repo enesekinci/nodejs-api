@@ -1,0 +1,28 @@
+{
+  "name": "node-js-api",
+  "version": "1.0.0",
+  "description": "NodeJs Apı Çatısı Olarak Kullanılmak Üzere Hazırlandı.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcrypt": "^5.0.0",
+    "date-and-time": "^0.14.1",
+    "ejs": "^3.1.5",
+    "email-templates": "^7.1.2",
+    "email-validator": "^2.0.4",
+    "express": "^4.17.1",
+    "express-device": "^0.4.2",
+    "getmac": "^5.17.0",
+    "http-errors": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.8",
+    "nodemailer": "^6.4.14"
+  }
+}
